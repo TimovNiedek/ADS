@@ -104,6 +104,6 @@ This leaves us with wormholes *E-->M, A-->U, U-->N, U-->E* and *E-->N*. This is 
 We will analyse the complexity of the algorithm by analyzing each function individually.  
 The time function of `fillWormholes()` is *T(N) = (N(N-1))/2* because it contains a nested for-loop which loops through half of the `travelTimes` matrix (not including the zeroes on the diagonal), which is size *N\*N*. Therefore the complexity class of `fillWormholes()` is *O(N^2)*.  
 The complexity class of the line  `Collections.sort(wormholes, new WormholeComparator());`  is *O(N log(N))* because it uses a modifier version of the merge-sort algorithm.  
-The time function of `removeDoubleEdges()` is *T(N) = N((N(N-1))/2)*, which is based on the *number of stars * maximum number of edges*. Therefore, the complexity of `removeDoubleEdges()` is in *O(N^3)*.  
+The time function of `removeDoubleEdges()` is *T(N) = N((N(N-1))/2)*, which is based on the number of stars times maximum number of edges. Therefore, the complexity of `removeDoubleEdges()` is in *O(N^3)*.  
 Converting the resulting edges into a NavMap is in complexity class *O(N)*.  
 Therefore, the function with the highest complexity is `removeDoubleEdges()`, which determines the complexity of the entire algorithm. The algorithm is in complexity class *O(N^3)*.
